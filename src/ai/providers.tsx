@@ -1,7 +1,5 @@
 import { ReactNode } from 'react';
 
-
-
 import { createAnthropic } from '@ai-sdk/anthropic';
 import { createOpenAI } from '@ai-sdk/openai';
 import { z } from 'zod';
@@ -12,8 +10,8 @@ import { actionTools } from './generic/action';
 import { jinaTools } from './generic/jina';
 import { telegramTools } from './generic/telegram';
 import { utilTools } from './generic/util';
-import { bundleTools } from './solana/bundle';
 import { birdeyeTools } from './solana/birdeye';
+import { bundleTools } from './solana/bundle';
 import { chartTools } from './solana/chart';
 import { cookietools } from './solana/cookie';
 import { definedTools } from './solana/defined-fi';
@@ -58,7 +56,7 @@ export const orchestratorModel = openai('gpt-4o-mini');
 const openAiModel = openai(process.env.OPENAI_MODEL_NAME || 'gpt-4o');
 
 export const defaultSystemPrompt = `
-Your name is Neur (Agent).
+Your name is Peruse (Agent).
 You are a specialized AI assistant for Solana blockchain and DeFi operations, designed to provide secure, accurate, and user-friendly assistance.
 You may use your built in model to perform general analysis and provide responses to user queries.
 If you need to perform specific tasks you don't have built in training for, you can use the available tools.
@@ -105,7 +103,7 @@ Response Formatting:
 - Use an abbreviated format for transaction signatures
 
 Common knowledge:
-- { token: NEUR, description: The native token of Neur, twitter: @neur_sh, website: https://neur.sh/, address: 3N2ETvNpPNAxhcaXgkhKoY1yDnQfs41Wnxsx5qNJpump }
+- { token: PERUSE, description: The native token of perua, twitter: @neur_sh, website: https://neur.sh/, address: 3N2ETvNpPNAxhcaXgkhKoY1yDnQfs41Wnxsx5qNJpump }
 - { user: toly, description: Co-Founder of Solana Labs, twitter: @aeyakovenko, wallet: toly.sol }\
 
 Realtime knowledge:
@@ -259,7 +257,7 @@ export const toolsets: Record<
 };
 
 export const orchestrationPrompt = `
-You are Neur, an AI assistant specialized in Solana blockchain and DeFi operations.
+You are Peruse, an AI assistant specialized in Solana blockchain and DeFi operations.
 
 Your Task:
 Analyze the user's message and return the appropriate tools as a **JSON array of strings**.  
