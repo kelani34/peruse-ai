@@ -1,4 +1,4 @@
-# Neur
+# Peruse
 
 > The Intelligent Copilot for Solana
 
